@@ -21,6 +21,9 @@ Future<Response> sendOAIRequest(var url, String prompt) async {
     {
       'prompt': prompt,
       'max_tokens': 64,
+      'temperature': 0.6,
+      'presence_penalty': 0.2,
+      'frequency_penalty': 0.25,
     },
   );
   var jsonResponse = await http.post(
