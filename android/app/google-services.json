@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "518185737711",
+    "firebase_url": "https://writeai-prealpha-default-rtdb.firebaseio.com",
+    "project_id": "writeai-prealpha",
+    "storage_bucket": "writeai-prealpha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518185737711:android:4dab95933680c920c7aa1a",
+        "android_client_info": {
+          "package_name": "app.writeai.writeai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518185737711-3s0v0cj42129sqq24c0u4fo840pa3tms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.writeai.writeai",
+            "certificate_hash": "d3f50d40af8349b9776f12bebbdb4a3740cdda71"
+          }
+        },
+        {
+          "client_id": "518185737711-v9a3cq7kl62v0i2use85185smvbuu2vf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0BKeJW-qtjvYdMpyXybWoWONBaqkgRrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518185737711-v9a3cq7kl62v0i2use85185smvbuu2vf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
