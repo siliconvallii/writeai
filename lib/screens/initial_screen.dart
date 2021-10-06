@@ -45,12 +45,6 @@ class InitialScreen extends StatelessWidget {
                   }
                 },
               ),
-              ElevatedButton(
-                child: const Text('Home'),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/home');
-                },
-              ),
             ],
           ),
         ),
