@@ -33,7 +33,7 @@ class AboutUsScreen extends StatelessWidget {
             width: MediaQuery.of(context).size.width / 100 * 90,
             child: Column(
               children: [
-                const Spacer(flex: 15),
+                const Spacer(flex: 25),
                 RichText(
                   textAlign: TextAlign.center,
                   text: const TextSpan(
