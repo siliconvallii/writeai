@@ -1,7 +1,6 @@
 // packages
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:writeai/providers/google_sign_in.dart';
 
 class InitialScreen extends StatelessWidget {
   const InitialScreen({Key? key}) : super(key: key);

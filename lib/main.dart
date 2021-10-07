@@ -1,9 +1,10 @@
 // packages
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:writeai/screens/about_us_screen.dart';
 // screens
+import 'package:writeai/screens/about_us_screen.dart';
 import 'package:writeai/screens/editor_screen.dart';
+import 'package:writeai/screens/form_screen.dart';
 import 'package:writeai/screens/home_screen.dart';
 import 'package:writeai/screens/initial_screen.dart';
 import 'package:writeai/screens/invitation_screen.dart';
@@ -28,6 +29,7 @@ class WriteAI extends StatelessWidget {
       routes: {
         '/initial': (BuildContext context) => const InitialScreen(),
         '/about_us': (BuildContext context) => const AboutUsScreen(),
+        '/form': (BuildContext context) => FormScreen(),
         '/waitlist': (BuildContext context) => const WaitlistScreen(),
         '/invitation': (BuildContext context) => const InvitationScreen(),
         '/home': (BuildContext context) => const HomeScreen(),

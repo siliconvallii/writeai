@@ -1,5 +1,6 @@
 // packages
 import 'package:flutter/material.dart';
+import 'package:writeai/data/data.dart';
 // screens
 import 'package:writeai/providers/google_sign_in.dart';
 
@@ -32,8 +33,8 @@ class AboutUsScreen extends StatelessWidget {
                       // user has been invited
 
                       Navigator.pushNamed(context, '/invitation');
-                    } else if (_user['waitlisted']) {
-                      // user is waitlisted
+                    } else {
+                      // user is new or waitlisted
 
                       Navigator.pushNamed(context, '/waitlist');
                     }

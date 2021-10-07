@@ -21,21 +21,9 @@ class InvitationScreen extends StatelessWidget {
             children: [
               const Text('You have been invited'),
               ElevatedButton(
-                child: const Text('Join'),
+                child: const Text('Continue'),
                 onPressed: () {
-                  // set user 'joined' parameter to true
-                  try {
-                    ref
-                        .child('users')
-                        .child(user['uid'])
-                        .child('joined')
-                        .set(true);
-                  } on Error {
-                    rethrow;
-                  }
-
-                  // navigate to HomeScreen
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.pushNamed(context, '/form');
                 },
               ),
             ],
