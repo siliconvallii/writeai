@@ -40,6 +40,7 @@ dependencies:
   firebase_auth: ^3.1.2
   http: ^0.13.4
   simple_gradient_text: ^1.2.2
+  url_launcher: ^6.0.12
 
 dev_dependencies:
   flutter_test:
