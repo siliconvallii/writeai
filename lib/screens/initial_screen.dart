@@ -17,27 +17,9 @@ class InitialScreen extends StatelessWidget {
           child: Column(
             children: [
               ElevatedButton(
-                child: const Text('Google Sign In'),
-                onPressed: () async {
-                  try {
-                    final Map _user = await googleSignIn();
-                    if (_user['joined']) {
-                      // user has joined
-
-                      // redirect to HomeScreen
-                      Navigator.pushNamed(context, '/home');
-                    } else if (_user['invited']) {
-                      // user has been invited
-
-                      Navigator.pushNamed(context, '/invitation');
-                    } else if (_user['waitlisted']) {
-                      // user is waitlisted
-
-                      Navigator.pushNamed(context, '/waitlist');
-                    }
-                  } on Error {
-                    rethrow;
-                  }
+                child: const Text('Join Now'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/about_us');
                 },
               ),
             ],
