@@ -9,3 +9,5 @@ Map user = {
   'invited': null,
   'joined': null,
 };
+
+String websiteUrl = 'https://writeai.app/';
