@@ -32,7 +32,7 @@ class WriteAI extends StatelessWidget {
       routes: {
         '/initial': (BuildContext context) => const InitialScreen(),
         '/about_us': (BuildContext context) => const AboutUsScreen(),
-        '/form': (BuildContext context) => FormScreen(),
+        '/form': (BuildContext context) => const FormScreen(),
         '/waitlist': (BuildContext context) => const WaitlistScreen(),
         '/invitation': (BuildContext context) => const InvitationScreen(),
         '/home': (BuildContext context) => const HomeScreen(),
