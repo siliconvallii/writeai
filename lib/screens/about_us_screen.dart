@@ -94,7 +94,7 @@ class AboutUsScreen extends StatelessWidget {
                 const DiscoverMore(),
                 const Spacer(flex: 30),
                 BottomButton(
-                  title: 'Sign-in with Google',
+                  title: 'Sign in with Google',
                   onPressed: () async {
                     try {
                       final Map _user = await googleSignIn();
