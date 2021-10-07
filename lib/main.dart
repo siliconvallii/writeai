@@ -25,6 +25,9 @@ class WriteAI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: const Color(0xffD31788),
+      ),
       initialRoute: '/initial',
       routes: {
         '/initial': (BuildContext context) => const InitialScreen(),
