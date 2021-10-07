@@ -2,6 +2,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:writeai/providers/openai_api/secret_key.dart';
+
 class Response {
   final String id;
   final String object;
@@ -13,7 +15,7 @@ class Response {
 
 Future<Response> sendOAIRequest(var url, String prompt) async {
   var headers = {
-    HttpHeaders.authorizationHeader: 'Bearer API-KEY-HERE',
+    HttpHeaders.authorizationHeader: 'Bearer $secretKey',
     HttpHeaders.acceptHeader: 'application/json',
     HttpHeaders.contentTypeHeader: 'application/json',
   };
