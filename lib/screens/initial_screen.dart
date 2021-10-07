@@ -41,15 +41,11 @@ class InitialScreen extends StatelessWidget {
                 ),
               ),
               const Spacer(flex: 100),
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 100 * 80,
-                height: MediaQuery.of(context).size.height / 100 * 5,
-                child: BottomButton(
-                  title: 'Join Now',
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/about_us');
-                  },
-                ),
+              BottomButton(
+                title: 'Join Now',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/about_us');
+                },
               ),
               const Spacer(flex: 15),
             ],
