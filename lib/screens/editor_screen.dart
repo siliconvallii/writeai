@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:writeai/providers/openai_api/send_oai_request.dart';
-import 'package:writeai/services/create_document.dart';
+import 'package:writeai/utils/create_document.dart';
 
 class EditorScreen extends StatelessWidget {
   EditorScreen({Key? key}) : super(key: key);
