@@ -12,20 +12,17 @@ class AboutUsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xffffffff),
+        foregroundColor: const Color(0xffffffff),
+        backgroundColor: const Color(0xffD31788),
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
-            color: Color(0xff000000),
           ),
           onPressed: () => Navigator.pop(context),
         ),
-        title: SizedBox(
-          height: MediaQuery.of(context).size.height / 100 * 4,
-          child: Image.asset('assets/images/logo-removebg.png'),
-        ),
+        title: const Text('About Write AI'),
       ),
       body: SafeArea(
         child: Center(
