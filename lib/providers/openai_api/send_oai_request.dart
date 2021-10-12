@@ -33,7 +33,7 @@ Future<Response> sendOAIRequest(var url, String prompt) async {
     headers: headers,
     body: body,
   );
-  var _response = jsonDecode(jsonResponse.body);
+  var _response = await jsonDecode(jsonResponse.body);
   return Response(
     _response['id'],
     _response['object'],
