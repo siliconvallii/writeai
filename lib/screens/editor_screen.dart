@@ -19,8 +19,8 @@ class EditorScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xffffffff),
-        foregroundColor: const Color(0xff000000),
+        foregroundColor: const Color(0xffffffff),
+        backgroundColor: const Color(0xffD31788),
         elevation: 0,
         centerTitle: true,
         title: Text(_document.title),
