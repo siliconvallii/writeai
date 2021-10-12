@@ -17,37 +17,13 @@ class EditorScreen extends StatelessWidget {
 
     String _lastTextBeforeCompletion = '';
 
-    void _handleBottomBar(int index) async {
-      if (index == 0) {
-        _editorController.text = _lastTextBeforeCompletion;
-      } else if (index == 1) {
-        _editorController.text = _lastTextBeforeCompletion;
-
-        Uri url =
-            Uri.parse('https://api.openai.com/v1/engines/davinci/completions');
-        String prompt = _editorController.text;
-
-        Response response = await sendOAIRequest(url, prompt);
-        String responseText = response.choices[0]['text'];
-
-        _editorController.text = _editorController.text + responseText;
-      } else if (index == 2) {
-        _lastTextBeforeCompletion = _editorController.text;
-
-        Uri url =
-            Uri.parse('https://api.openai.com/v1/engines/davinci/completions');
-        String prompt = _editorController.text;
-
-        Response response = await sendOAIRequest(url, prompt);
-        String responseText = response.choices[0]['text'];
-
-        _editorController.text = _editorController.text + responseText;
-      }
-    }
-
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Editor'),
+        backgroundColor: const Color(0xffffffff),
+        foregroundColor: const Color(0xff000000),
+        elevation: 0,
+        centerTitle: true,
+        title: Text(_document.title),
         actions: [
           IconButton(
             icon: const Icon(Icons.save),
@@ -57,22 +33,77 @@ class EditorScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.cancel),
-            label: 'Delete',
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              color: Color(0xffD31788),
+            ),
+            child: IconButton(
+              icon: const Icon(
+                Icons.cancel,
+                color: Color(0xffffffff),
+              ),
+              onPressed: () {
+                // delete
+
+                _editorController.text = _lastTextBeforeCompletion;
+              },
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.refresh),
-            label: 'Regenerate',
+          Container(
+            decoration: const BoxDecoration(
+              color: Color(0xffD31788),
+            ),
+            child: IconButton(
+              icon: const Icon(
+                Icons.refresh,
+                color: Color(0xffffffff),
+              ),
+              onPressed: () async {
+                // regenerate
+
+                _editorController.text = _lastTextBeforeCompletion;
+
+                Uri url = Uri.parse(
+                    'https://api.openai.com/v1/engines/davinci/completions');
+                String prompt = _editorController.text;
+
+                Response response = await sendOAIRequest(url, prompt);
+                String responseText = response.choices[0]['text'];
+
+                _editorController.text = _editorController.text + responseText;
+              },
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.download),
-            label: 'Generate',
+          Container(
+            decoration: const BoxDecoration(
+              color: Color(0xffD31788),
+            ),
+            child: IconButton(
+              icon: const Icon(
+                Icons.create,
+                color: Color(0xffffffff),
+              ),
+              onPressed: () async {
+                // generate
+
+                _lastTextBeforeCompletion = _editorController.text;
+
+                Uri url = Uri.parse(
+                  'https://api.openai.com/v1/engines/davinci/completions',
+                );
+                String prompt = _editorController.text;
+
+                Response response = await sendOAIRequest(url, prompt);
+                String responseText = response.choices[0]['text'];
+
+                _editorController.text = _editorController.text + responseText;
+              },
+            ),
           ),
         ],
-        onTap: _handleBottomBar,
       ),
       body: SafeArea(
         child: Center(
